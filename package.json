@@ -1,0 +1,27 @@
+{
+  "author": "Spark",
+  "name": "spark-tinker",
+  "description": "Official Spark Tinker plugin for Spark API.",
+  "version": "0.1.0",
+  "homepage": "http://spark.io",
+  "bugs": "https://github.com/spark/spark-tinker/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spark/spark-tinker"
+  },
+  "engines": {
+    "node": ">=0.10.26"
+  },
+  "main": "./lib/tinker",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jshint":     ">= 2.5.4",
+    "mocha": "1.21.x",
+    "chai": "1.9.x",
+    "sinon-chai": "2.5.x",
+    "sinon": "1.10.x",
+    "chai-as-promised": "4.1.x",
+    "istanbul": "0.3.0"
+  }
+}
