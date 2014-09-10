@@ -21,11 +21,50 @@ $ npm install spark-tinker
 ## Usage
 
 ```javascript
-var spark = require('spark');
+/*jslint node: true */
+"use strict";
 
-spark.login({ username: 'email@example.com', password: 'password' }, function(err, body) {
-  console.log('API call login completed on callback:', body);
+var Spark =require('spark');
+
+// Make sure the spark-tinker npm module is installed before
+// including the plugin.
+Spark.include('tinker');
+
+Spark.on('login', function() {
+  // If login is successful we get and accessToken,
+  // we'll use that to call Spark API ListDevices
+  var devicesPr = Spark.listDevices();
+
+  devicesPr.then(
+    // We get an array with devices back and we list them
+    function(devices){
+      console.log('API call List Devices: ', devices);
+
+      // callback to be executed by each core
+      var callback = function(err, data) {
+        if (err) {
+          console.log('An error occurred while calling function:', err);
+        } else {
+          console.log('function called successfully:', data);
+        }
+      };
+
+      // We get the Spark core device and call Tinker commands on it:
+      var core = devices[0];
+      core.tinker.digitalWrite('D0', 'LOW', callback);
+      //core.tinker.digitalRead('D1', callback);
+      //core.tinker.analogWrite('D0', 128, callback);
+      //core.tinker.analogRead('D0', callback);
+    },
+    function(err) {
+      console.log('API call failed: ', err);
+    }
+  );
 });
+
+// Login as usual
+Spark.login({ username: 'myUserName', password: 'MyPassword' });
+
 ```
 
 For further examples visit /examples directory: https://github.com/spark/sparkjs/tree/master/examples
