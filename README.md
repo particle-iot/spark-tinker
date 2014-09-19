@@ -1,13 +1,13 @@
-sparkjs
+spark-tinker plugin module
 =======
 
-Spark-Tinker is a plugin made to work with [Spark Api](https://github.com/spark/spark-tinker)
+Spark-Tinker is a plugin made to work with the [Spark JavaScript API wrapper](https://github.com/spark/sparkjs)
 and interact with the default tinker firmware included with the Spark core.
 It uses node.js and can run on Windows, Mac OS X, and Linux fairly easily.
-You can use it to create your own plugins and use in conjuction with the Spark Api.
+You can use it to create your own plugins and use in conjuction with the Spark API.
 It's also open source so you can edit, change or even send in pull requests if you want to share!
 
-## Instalation
+## Installation
 
 First, make sure you have [node.js](http://nodejs.org/) installed!
 
@@ -67,7 +67,7 @@ Spark.login({ username: 'myUserName', password: 'MyPassword' });
 
 ```
 
-For further examples visit /examples directory: https://github.com/spark/sparkjs/tree/master/examples
+For further examples visit the SparkJS examples directory: https://github.com/spark/sparkjs/tree/master/examples
 
 ## Getting Started
 
@@ -82,7 +82,7 @@ or you can pass a callback function, or add a listner for that specific event.
 
 ## Device object
 
-You can get a list of devices by calling: `spark.getDevices()`
+You can get a list of devices by calling: `spark.listDevices()`
 
 This plugin will add the following functions to each device:
 
