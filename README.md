@@ -1,7 +1,7 @@
 spark-tinker plugin module
 =======
 
-Spark-Tinker is a plugin made to work with the [Spark JavaScript API wrapper](https://github.com/spark/sparkjs)
+Spark-Tinker is a plugin made to work with the [Spark JavaScript API wrapper](https://github.com/particle-iot/sparkjs)
 and interact with the default tinker firmware included with the Spark core.
 It uses node.js and can run on Windows, Mac OS X, and Linux fairly easily.
 You can use it to create your own plugins and use in conjuction with the Spark API.
@@ -67,7 +67,7 @@ Spark.login({ username: 'myUserName', password: 'MyPassword' });
 
 ```
 
-For further examples visit the SparkJS examples directory: https://github.com/spark/sparkjs/tree/master/examples
+For further examples visit the SparkJS examples directory: https://github.com/particle-iot/sparkjs/tree/master/examples
 
 ## Getting Started
 
@@ -78,7 +78,7 @@ Every function returns a [promise](http://promisesaplus.com/) for you to handle 
 or you can pass a callback function, or add a listner for that specific event.
 (Please note that if a callback function is passed, the function will return null instead of a promise)
 
-* More examples on how to use promises/callbacks visit: https://github.com/spark/sparkjs/tree/master/examples
+* More examples on how to use promises/callbacks visit: https://github.com/particle-iot/sparkjs/tree/master/examples
 
 ## Device object
 

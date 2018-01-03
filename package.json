@@ -4,10 +4,10 @@
   "description": "Official Spark Tinker plugin for Spark API.",
   "version": "0.1.0",
   "homepage": "http://spark.io",
-  "bugs": "https://github.com/spark/spark-tinker/issues",
+  "bugs": "https://github.com/particle-iot/spark-tinker/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spark/spark-tinker"
+    "url": "https://github.com/particle-iot/spark-tinker"
   },
   "engines": {
     "node": ">=0.10.26"
